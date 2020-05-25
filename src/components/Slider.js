@@ -4,6 +4,7 @@ import TrackPlayer, {ProgressComponent} from 'react-native-track-player';
 import Slider from '@react-native-community/slider';
 import {connect} from 'react-redux';
 import * as action from '../actions';
+import {red} from '../themes';
 
 class ProgressSlider extends ProgressComponent {
   msToSec(ms) {
@@ -45,9 +46,9 @@ class ProgressSlider extends ProgressComponent {
             value={this.sliderVal(currentTrack.duration)}
             minimumValue={0}
             maximumValue={this.msToSec(currentTrack.duration)}
-            minimumTrackTintColor="#fff"
+            minimumTrackTintColor={red.primaryColor}
             thumbTintColor="transparent"
-            maximumTrackTintColor="#fff"
+            maximumTrackTintColor="#aaa"
             onValueChange={this.seekTo}
             step={1}
           />
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
   },
   duration: {
     fontFamily: 'Poppins-Medium',
-    fontSize: 14,
+    fontSize: 12,
     color: '#ddd',
     letterSpacing: 1,
   },

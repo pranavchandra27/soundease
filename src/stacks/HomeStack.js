@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import ShowPlaylistScreen from '../screens/ShowPlaylistScreen';
 import PlayerScreen from '../screens/PlayerScreen';
 import BottomPlayer from '../components/BottomPlayer';
+import {blue, red} from '../themes';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -16,20 +17,23 @@ const HomeStack = ({navigation}) => {
   const headerOptions = ({route}) => ({
     title: route.params.title,
     headerTitleStyle: {
-      fontFamily: 'Poppins-Medium',
-      fontSize: 18,
+      fontFamily: 'Poppins-Regular',
+      fontSize: 16,
       maxWidth: SCREEN_WIDTH / 1.7,
+      color: '#fff',
     },
+    headerTintColor: '#fff',
     headerStyle: {
       elevation: 0,
+      backgroundColor: red.primaryColor,
     },
   });
   return (
     <>
       <StatusBar
         translucent={true}
-        backgroundColor="#fff"
-        barStyle="dark-content"
+        backgroundColor="rgba(0,0,0,0.1)"
+        barStyle="light-content"
       />
       <Stack.Navigator
         screenOptions={{
@@ -43,20 +47,24 @@ const HomeStack = ({navigation}) => {
           options={{
             headerStyle: {
               elevation: 0,
+              backgroundColor: red.primaryColor,
             },
-            headerTitle: '',
+            headerTitle: 'Soundease',
+            headerTitleAlign: 'center',
+            headerTintColor: '#fff',
+            headerTitleStyle: {fontFamily: 'Poppins-Medium', fontSize: 16},
             headerLeft: () => (
               <TouchableOpacity
                 onPress={() => navigation.openDrawer()}
                 style={{marginLeft: 12}}>
-                <Icon name="menu" size={24} color="#333" />
+                <Icon name="menu" size={24} color="#fff" />
               </TouchableOpacity>
             ),
             headerRight: () => (
               <TouchableOpacity
                 onPress={() => navigation.navigate('search')}
                 style={{marginRight: 12}}>
-                <Icon name="search" size={24} color="#333" />
+                <Icon name="search" size={24} color="#fff" />
               </TouchableOpacity>
             ),
           }}

@@ -38,6 +38,7 @@ const AddToPlaylist = props => {
           justifyContent: 'center',
           alignItems: 'center',
           marginBottom: 80,
+          backgroundColor: '#fff',
         }}>
         <Text style={{fontFamily: 'Poppins-Medium', fontSize: 16}}>
           You don't have any playlists yet
@@ -47,7 +48,11 @@ const AddToPlaylist = props => {
   }
 
   return (
-    <ScrollView>
+    <ScrollView
+      style={{
+        flex: 1,
+        backgroundColor: '#fff',
+      }}>
       {keys.map((key, index) => (
         <ListItem
           title={key}

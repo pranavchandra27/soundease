@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import * as actions from '../actions';
 import RenderToast from '../components/RenderToast';
 import Icon from 'react-native-vector-icons/Feather';
-import Ionicon from 'react-native-vector-icons/Ionicons';
+import Ionicon from 'react-native-vector-icons/Entypo';
 import {getRandomNumber} from '../utils';
 
 const PlaybackControls = props => {
@@ -45,20 +45,20 @@ const PlaybackControls = props => {
       </TouchableOpacity>
       <View style={styles.controlsContainer}>
         <TouchableOpacity activeOpacity={0.5} onPress={skipBackward}>
-          <Ionicon name="md-rewind" size={28} color="#fff" />
+          <Ionicon name="controller-fast-backward" size={28} color="#fff" />
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.pause_play_container}
           activeOpacity={0.5}
           onPress={() => setPlayback(!isPlaying)}>
           <Ionicon
-            name={isPlaying ? 'md-pause' : 'md-play'}
+            name={isPlaying ? 'controller-paus' : 'controller-play'}
             size={40}
             color="#fff"
           />
         </TouchableOpacity>
         <TouchableOpacity activeOpacity={0.5} onPress={skipForward}>
-          <Ionicon name="md-fastforward" size={28} color="#fff" />
+          <Ionicon name="controller-fast-forward" size={28} color="#fff" />
         </TouchableOpacity>
       </View>
       <TouchableOpacity activeOpacity={0.5} onPress={onShufflePress}>
@@ -96,6 +96,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   pause_play_container: {
-    marginHorizontal: 40,
+    marginHorizontal: 30,
   },
 });

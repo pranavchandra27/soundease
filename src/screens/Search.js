@@ -5,6 +5,7 @@ import * as actions from '../actions';
 import SearchBar from '../components/SearchBar';
 import TrackItem from '../components/TrackItem';
 import Icon from 'react-native-vector-icons/Feather';
+import {red} from '../themes';
 
 const Search = props => {
   const [searchInput, setInput] = useState('');
@@ -35,7 +36,7 @@ const Search = props => {
       />
     ) : (
       <View style={styles.emptyView}>
-        <Icon name="search" size={60} />
+        <Icon name="search" size={60} color={red.primaryColor} />
         <Text style={styles.emptyText}>Type something</Text>
       </View>
     );
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
   emptyText: {
     fontFamily: 'Poppins-Medium',
     fontSize: 16,
-    color: '#333',
+    color: red.primaryColor,
     marginTop: 20,
   },
 });

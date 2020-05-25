@@ -33,7 +33,7 @@ const PlayerScreen = props => {
     : {uri: currentTrack.artwork};
 
   return (
-    <ImageBackground source={cover} style={{flex: 1}} blurRadius={50}>
+    <ImageBackground source={cover} style={{flex: 1}} blurRadius={20}>
       <LinearGradient
         colors={['rgba(18,18,18,0.20)', 'rgba(18,18,18,0.80)']}
         style={{flex: 1}}>
@@ -108,19 +108,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 30,
     marginHorizontal: 30,
-    elevation: 20,
-    shadowOffset: {width: 20, height: 20},
-    shadowColor: '#fff',
-    shadowOpacity: 0.9,
   },
   coverImg: {
-    width: 280,
+    width: 300,
     height: 280,
-    borderRadius: 2,
+    resizeMode: 'contain',
   },
 
   titleContainer: {
-    marginTop: 20,
+    marginTop: 30,
     marginHorizontal: 30,
     alignItems: 'center',
   },
@@ -137,7 +133,7 @@ const styles = StyleSheet.create({
     color: '#ccc',
   },
   progressWrapper: {
-    marginTop: 20,
+    marginTop: 30,
   },
   controlsWrapper: {
     marginTop: 20,
