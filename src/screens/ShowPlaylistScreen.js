@@ -6,7 +6,7 @@ import TrackItem from '../components/TrackItem';
 
 const ShowPlaylistScreen = props => {
   useEffect(() => {
-    let unsubscribe = props.navigation.addListener('focus', props.hideFooter);
+    let unsubscribe = props.navigation.addListener('focus', props.showFooter);
     return unsubscribe;
   }, [props.navigation]);
 
@@ -32,7 +32,7 @@ const ShowPlaylistScreen = props => {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 60,
+
         backgroundColor: '#fff',
       }}>
       <Text style={{fontFamily: 'Poppins-Regular', fontSize: 16}}>

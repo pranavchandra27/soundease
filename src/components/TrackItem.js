@@ -93,7 +93,8 @@ const styles = StyleSheet.create({
   coverContainer: {
     width: 50,
     height: 50,
-    elevation: 2,
+    elevation: 5,
+    borderRadius: 5,
   },
   cover: {
     width: 50,

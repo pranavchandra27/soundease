@@ -4,7 +4,7 @@ import TrackList from '../screens/TrackList';
 import AlbumList from '../screens/AlbumList';
 import ArtistList from '../screens/ArtistList';
 import PlaylistScreen from '../screens/PlaylistScreen';
-import {red} from '../themes';
+import {blue} from '../themes';
 
 const TabBar = createMaterialTopTabNavigator();
 
@@ -16,21 +16,21 @@ const Tabs = ({navigation}) => {
           style: {
             elevation: 2,
             width: 'auto',
-            backgroundColor: red.primaryColor,
+            backgroundColor: blue.secondaryColor,
           },
           scrollEnabled: true,
           tabStyle: {
             height: 50,
-            width: 100,
+            width: 90,
           },
           activeTintColor: '#fff',
           inactiveTintColor: '#eee',
           labelStyle: {
-            fontSize: 14,
-            fontFamily: 'Poppins-Regular',
+            fontSize: 12,
+            fontFamily: 'Poppins-Medium',
             textTransform: 'uppercase',
           },
-          indicatorStyle: {height: 3, backgroundColor: red.secondaryColor},
+          indicatorStyle: {height: 3, backgroundColor: blue.contrstColor},
           allowFontScaling: false,
         }}>
         <TabBar.Screen name="Tracks" component={TrackList} />

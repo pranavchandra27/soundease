@@ -13,7 +13,7 @@ import {useTrackPlayerProgress} from 'react-native-track-player/lib/hooks';
 import Icon from 'react-native-vector-icons/Feather';
 import ProgressBar from './ProgressBar';
 import placeholder from '../../assets/img/default-artwork.png';
-import {red} from '../themes';
+import {blue} from '../themes';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -37,7 +37,7 @@ const BottomPlayer = props => {
       <View style={styles.progress}>
         <ProgressBar
           progress={isNaN(progress) ? 0 : +progress.toFixed(3)}
-          color={red.primaryColor}
+          color={blue.contrstColor}
           style={styles.ProgressBar}
         />
       </View>
@@ -57,11 +57,7 @@ const BottomPlayer = props => {
           activeOpacity={0.8}
           onPress={togglePlayback}
           style={styles.playBtn}>
-          <Icon
-            name={isPlaying ? 'pause' : 'play'}
-            size={30}
-            color={red.secondaryColor}
-          />
+          <Icon name={isPlaying ? 'pause' : 'play'} size={30} color={'grey'} />
         </TouchableOpacity>
       </View>
     </TouchableOpacity>
@@ -94,7 +90,8 @@ const styles = StyleSheet.create({
     height: 45,
     width: 45,
     marginHorizontal: 15,
-    elevation: 4,
+    elevation: 10,
+    borderRadius: 5,
   },
   coverImg: {
     height: 45,

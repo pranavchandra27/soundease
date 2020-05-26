@@ -8,11 +8,12 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {blue} from '../themes';
 
 const ScreenWidth = Dimensions.get('window').width;
 
 const ListItem = props => {
-  const rippleColor = 'rgba(18, 18, 18, 0.1)';
+  const rippleColor = 'rgba(18, 18, 18, 0.2)';
   return (
     <Touchable
       onPress={props.onPress}
@@ -20,7 +21,12 @@ const ListItem = props => {
       delayLongPress={props.delayLongPress}
       background={Touchable.Ripple(rippleColor, false)}>
       <View style={styles.wrapper}>
-        <Icon name={props.iconName} size={28} style={styles.icon} />
+        <Icon
+          name={props.iconName}
+          size={28}
+          style={styles.icon}
+          color={blue.secondaryColor}
+        />
         <View style={styles.textWrapper}>
           <Text style={styles.title} numberOfLines={1}>
             {props.title}
@@ -29,7 +35,6 @@ const ListItem = props => {
             <Text style={styles.subtitle}>{props.subtitle}</Text>
           )}
         </View>
-
         {props.rightElement && props.rightElement}
       </View>
     </Touchable>

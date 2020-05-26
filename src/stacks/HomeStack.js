@@ -25,7 +25,7 @@ const HomeStack = ({navigation}) => {
     headerTintColor: '#fff',
     headerStyle: {
       elevation: 0,
-      backgroundColor: red.primaryColor,
+      backgroundColor: blue.secondaryColor,
     },
   });
   return (
@@ -47,12 +47,16 @@ const HomeStack = ({navigation}) => {
           options={{
             headerStyle: {
               elevation: 0,
-              backgroundColor: red.primaryColor,
+              backgroundColor: blue.secondaryColor,
             },
             headerTitle: 'Soundease',
             headerTitleAlign: 'center',
             headerTintColor: '#fff',
-            headerTitleStyle: {fontFamily: 'Poppins-Medium', fontSize: 16},
+            headerTitleStyle: {
+              fontFamily: 'Poppins-Regular',
+              fontSize: 16,
+              letterSpacing: 1,
+            },
             headerLeft: () => (
               <TouchableOpacity
                 onPress={() => navigation.openDrawer()}

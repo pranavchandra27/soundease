@@ -5,7 +5,7 @@ import HomeStack from './HomeStack';
 import Search from '../screens/Search';
 import Icon from 'react-native-vector-icons/Ionicons';
 import AddToPlaylist from '../screens/AddToPlaylist';
-import {red} from '../themes';
+import {blue} from '../themes';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -40,7 +40,7 @@ const MainStack = ({navigation}) => {
           },
           headerStyle: {
             elevation: 0,
-            backgroundColor: red.primaryColor,
+            backgroundColor: blue.primaryColor,
           },
           headerLeft: () => (
             <TouchableOpacity
@@ -59,7 +59,7 @@ const MainStack = ({navigation}) => {
           title: 'Add to playlist',
           headerStyle: {
             elevation: 0,
-            backgroundColor: red.primaryColor,
+            backgroundColor: blue.primaryColor,
           },
           headerTintColor: '#fff',
           headerTitleAlign: 'center',

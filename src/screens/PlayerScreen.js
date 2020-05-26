@@ -16,6 +16,7 @@ import Icon from 'react-native-vector-icons/Entypo';
 import ProgressSlider from '../components/Slider';
 import PlaybackControls from '../components/PlaybackControls';
 import defaultImg from '../../assets/img/default-artwork.png';
+import {blue} from '../themes';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
@@ -35,7 +36,7 @@ const PlayerScreen = props => {
   return (
     <ImageBackground source={cover} style={{flex: 1}} blurRadius={20}>
       <LinearGradient
-        colors={['rgba(18,18,18,0.20)', 'rgba(18,18,18,0.80)']}
+        colors={['rgba(18,18,18,0.3)', 'rgba(40,40,40,0.8)']}
         style={{flex: 1}}>
         <StatusBar
           backgroundColor="transparent"
@@ -46,11 +47,11 @@ const PlayerScreen = props => {
         <View style={styles.container}>
           <View style={styles.topBar}>
             <TouchableNativeFeedback onPress={() => navigation.goBack()}>
-              <Icon name="chevron-thin-left" size={20} color="#fff" />
+              <Icon name="chevron-thin-left" size={20} color={blue.bgColor} />
             </TouchableNativeFeedback>
             <Text style={styles.topText}>Now Playing</Text>
             <TouchableNativeFeedback>
-              <Icon name="dots-two-vertical" size={20} color="#fff" />
+              <Icon name="dots-two-vertical" size={20} color={blue.bgColor} />
             </TouchableNativeFeedback>
           </View>
           <View style={styles.topCover}>
@@ -101,7 +102,7 @@ const styles = StyleSheet.create({
   topText: {
     fontFamily: 'Poppins-Medium',
     fontSize: 16,
-    color: '#fff',
+    color: blue.bgColor,
   },
   topCover: {
     alignItems: 'center',

@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, TextInput} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
-import {red} from '../themes';
+import {blue} from '../themes';
 
 const SearchBar = props => {
   const {onFocus, onBlur, value, setSearchInput} = props;
@@ -11,7 +11,7 @@ const SearchBar = props => {
         style={styles.searchIcon}
         name="search"
         size={24}
-        color={red.primaryColor}
+        color={blue.primaryColor}
       />
       <TextInput
         placeholder="Songs, Albums or Artists"
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     height: 50,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    borderColor: red.primaryColor,
+    borderColor: blue.primaryColor,
     borderWidth: 1,
     borderRadius: 25,
     marginHorizontal: 20,
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontFamily: 'Poppins-Regular',
     fontSize: 16,
-    color: red.primaryColor,
+    color: blue.primaryColor,
     alignItems: 'center',
     paddingRight: 30,
     backgroundColor: 'transparent',
